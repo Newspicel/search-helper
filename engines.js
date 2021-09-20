@@ -183,11 +183,6 @@ var searchEngines = [
           info: "News aus Deutschland und aller Welt mit Kommentaren und Hintergrundberichten",
       },
       {
-        name: "Spektrum.de",
-        url: "https://www.spektrum.de/suche/#/q/{0}",
-        info: "Nachrichten aus Wissenschaft und Forschung",
-      },
-      {
         name: "Bild.de",
         url: "https://www.bild.de/suche.bild.html?query={0}",
         info: "Die BILD-Zeitung ist Deutschlands größte Boulevardzeitung.",
@@ -204,7 +199,39 @@ var searchEngines = [
       }
     ],
   },
-
+  {name : "Science", engines: [
+    {
+      name: "ScienceDaily",
+      url: "https://www.sciencedaily.com/search/?keyword={0}",
+      info: "ScienceDaily is a science news website that covers a wide range of science topics.",
+    },
+    {
+      name: "ScienceDirect",
+      url: "https://www.sciencedirect.com/search?qs={0}",
+      info: "ScienceDirect is a leading source of science and technology information for the world's scientific community.",
+    },
+    {
+      name: "WeltDerPhysik",
+      url: "https://www.weltderphysik.de/service/suche/?id=14&L=0&q={0}",
+      info: "WeltDerPhysik ist eine Nachrichten-Website für Physiker, Physik-Experten und Physik-Anhänger.",
+    },
+    {
+      name: "Spektrum.de",
+      url: "https://www.spektrum.de/suche/#/q/{0}",
+      info: "Nachrichten aus Wissenschaft und Forschung",
+    },
+    {
+      name: "scinexx",
+      url: "https://www.scinexx.de/?s={0}",
+      info: "Nachrichten und Berichte aus der Wissenschaft mit inhaltlichen Schwerpunkten aus Bereichen wie Biotechnologie, Medizin, Astronomie, Physik, Technik und Trends in Umwelt- und Geoforschung.",
+    },
+    {
+      name: "Max-Planck-Gesellschaft",
+      url: "https://www.mpg.de/suche?utf8=%E2%9C%93&searchfield={0}",
+      info: "Die Max-Planck-Gesellschaft ist Deutschlands führende außeruniversitäre Forschungsorganisation.",
+    },
+    ]
+  },
   {
     name: "Image Search Engines",
     engines: [
@@ -231,17 +258,22 @@ var searchEngines = [
       {
         name: "Facebook",
         url: "https://www.facebook.com/search/top/?q={0}",
-        info: "Facebook ist eine Social Media Plattform.",
+        info: "Facebook ermöglicht die Erstellung von privaten Profilen zur Darstellung der eigenen Person.",
       },
       {
         name: "Twitter",
         url: "https://twitter.com/search?q={0}",
-        info: "Twitter ist eine Social Media Plattform.",
+        info: "Mikroblogging-Dienstes Twitter.",
       },
       {
         name: "Instagram",
         url: "https://www.instagram.com/explore/tags/{0}",
-        info: "Instagram ist eine Social Media Plattform.",
+        info: "Onlinedienst zum Teilen von Fotos und Videos.",
+      },
+      {
+        name: "Reddit",
+        url: "https://www.reddit.com/search/?q={0}",
+        info: "Reddit ist ein Social-News-Aggregator, eine Website, auf der registrierte Benutzer Inhalte einstellen bzw. anbieten können.",
       },
     ],
   },
