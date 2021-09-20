@@ -15,7 +15,7 @@ var searchEngines = [
       {
         name: "DuckDuckGo",
         url: "https://duckduckgo.com/?q={0}",
-        info: "DuckDuckGo search engine",
+        info: "DuckDuckGo ist eine Internet-Suchmaschine, die keine persönlichen Informationen sammeln soll.",
       },
       {
         name: "Yahoo",
@@ -35,7 +35,7 @@ var searchEngines = [
       {
         name: "Ask",
         url: "https://www.ask.com/web?q={0}",
-        info: "Ask search engine",
+        info: "Suchmaschiene nach festen Frage-Antwort-Reservoir.",
       },
       {
         name: "Baidu",
@@ -45,12 +45,12 @@ var searchEngines = [
       {
         name: "Excite",
         url: "https://www.excite.com/search?q={0}",
-        info: "Excite search engine",
+        info: "Excite ist ein Internetportal mit Suchmaschine und eigenem Webverzeichnis.",
       },
       {
         name: "Lycos",
         url: "https://search.lycos.com/web/?q={0}",
-        info: "Lycos search engine",
+        info: "Websuchmaschine und ein Webportal, die 1994 aus der Carnegie Mellon University hervorgegangen sind.",
       },
     ],
   },
@@ -115,7 +115,7 @@ var searchEngines = [
       {
         name: "Google News",
         url: "https://news.google.com/news?q={0}",
-        info: "Google News ist eine Funktion in der Google Suchmaschiene für Suchen von Nachrichten.",
+        info: "Google News ist eine Nachrichtensuchmaschine und automatisch erstellte Nachrichten-Website des US-amerikanischen Unternehmens Google LLC.",
       },
       {
         name: "DuckDuckGo News",
@@ -125,12 +125,12 @@ var searchEngines = [
       {
         name: "Yahoo News",
         url: "https://search.yahoo.com/news/search?p={0}",
-        info: "Yahoo News ist eine Funktion in der Yahoo Suche zur Suche von Nachrichten.",
+        info: "The latest news and headlines from Yahoo!",
       },
       {
           name: "Yandex News",
           url: "https://news.yandex.com/search/?text={0}",
-          info: "Yandex News ist eine Funktion in der Yandex Suche zur Suche von Nachrichten.",
+          info: "Yandex.News ist ein von Yandex entwickelter russischer Online-Nachrichtenaggregator.",
       }
     ],
   },
@@ -140,48 +140,68 @@ var searchEngines = [
       {
         name: "Tagesschau",
         url: "https://www.tagesschau.de/search/?searchText={0}",
-        info: "Die Tagesschau ist eine allgemeine Nachrichtensendung der ARD.",
+        info: "Die erste Adresse für Nachrichten und Information: An 365 Tagen im Jahr, rund um die Uhr aktualisiert - die wichtigsten News des Tages.",
       },
       {
         name: "Spiegel Online",
         url: "https://www.spiegel.de/suche/?suchbegriff={0}",
-        info: "Spiegel Online ist ein Deutsches Nachrichten Portal.",
+        info: "Alles Wichtige aus Politik, Wirtschaft, Sport, Kultur, Wissenschaft, Technik und mehr.",
       },
       {
         name: "Heise Online",
         url: "https://www.heise.de/suche/?q={0}&sort_by=date&rm=search",
-        info: "Heise Online ist eine  Nachrichten-Website mit Themenschwerpunkt Informations- und Telekommunikationstechnik.",
+        info: "News und Foren zu Computer, IT, Wissenschaft, Medien und Politik.",
       },
       {
         name: "Welt Online",
         url: "https://www.welt.de/search?q={0}",
-        info: "Die Welt ist eine überregionale deutsche Tageszeitung der Axel Springer SE.",
+        info: "Nachrichten, Kommentare, Liveticker, Videos und Streams sowie News aus Politik, Wirtschaft, Finanzen, Wetter, Sport, Fußball, Kultur, Reise und Internet.",
       },
       {
         name: "Focus Online",
         url: "https://www.focus.de/suche/?q={0}",
-        info: "Focus Online ist eine deutsche Tageszeitung derFocus GmbH.",
+        info: "minutenaktuelle Nachrichten und Service-Informationen von Deutschland",
       },
       {
         name: "Der Standard",
         url: "https://www.derstandard.at/search?query={0}",
-        info: "Der Standard ist eine österreichische Tageszeitung derStandard Online GmbH.",
+        info: "Nachrichten aktuell aus dem online News-Room der führenden Qualitätszeitung in Österreich",
       },
       {
         name: "Tagesspiegel",
         url: "spiegel.de/suchergebnis/?p=suche&sw={0}",
-        info: "Tagesspiegel ist eine deutsche Tageszeitung der Tagesspiegel Online GmbH.",
+        info: "Kommentare, Hintergründe und Interviews aus Politik, Wirtschaft und Berlin.",
       },
       {
         name: "Frankfurter Allgemeine",
         url: "https://www.faz.net/suche/?q={0}",
-        info: "Frankfurter Allgemeine ist eine deutsche Tageszeitung.",
+        info: "News, Nachrichten und aktuelle Meldungen aus allen Ressorts. Politik, Wirtschaft, Sport, Feuilleton und Finanzen",
       },
       {
           name: "Süddeutsche Zeitung",
           url: "https://www.sueddeutsche.de/news?search={0}",
-          info: "Süddeutsche Zeitung ist eine deutsche Tageszeitung.",
+          info: "News aus Deutschland und aller Welt mit Kommentaren und Hintergrundberichten",
       },
+      {
+        name: "Spektrum.de",
+        url: "https://www.spektrum.de/suche/#/q/{0}",
+        info: "Nachrichten aus Wissenschaft und Forschung",
+      },
+      {
+        name: "Bild.de",
+        url: "https://www.bild.de/suche.bild.html?query={0}",
+        info: "Die BILD-Zeitung ist Deutschlands größte Boulevardzeitung.",
+      },
+      {
+        name: "taz.de",
+        url: "https://taz.de/!s={0}/",
+        info: "Kritischer, unabhängiger Journalismus der linken Nachrichtenseite taz.",
+      },
+      {
+        name: "heute.de",
+        url: "https://www.zdf.de/suche?q={0}",
+        info: "Nachrichten aus Deutschland, Welt und international",
+      }
     ],
   },
 
@@ -191,28 +211,47 @@ var searchEngines = [
       {
         name: "Google Images",
         url: "https://www.google.com/search?q={0}&tbm=isch",
-        info: "Google Images st eine Funktion in der Google Suchmaschiene für Suchen von Bildern.",
+        info: "The most comprehensive image search on the web.",
       },
       {
         name: "DuckDuckGo Images",
         url: "https://duckduckgo.com/?q={0}&t=img&ia=images",
-        info: "DuckDuckGo Images die Suchmaschiene von DuckDuckGo zum Suchen von Bildern.",
+        info: "search for images using other websites right from the DuckDuckGo",
       },
       {
-        name: "Yahoo! Images",
+        name: "Yahoo Images",
         url: "https://images.search.yahoo.com/search/images?p={0}",
-        info: "Yahoo! Images search engine",
+        info: "Yahoo Images search engine",
       },
     ],
   },
-
+  {
+    name: "Social Media",
+    engines: [
+      {
+        name: "Facebook",
+        url: "https://www.facebook.com/search/top/?q={0}",
+        info: "Facebook ist eine Social Media Plattform.",
+      },
+      {
+        name: "Twitter",
+        url: "https://twitter.com/search?q={0}",
+        info: "Twitter ist eine Social Media Plattform.",
+      },
+      {
+        name: "Instagram",
+        url: "https://www.instagram.com/explore/tags/{0}",
+        info: "Instagram ist eine Social Media Plattform.",
+      },
+    ],
+  },
   {
     name: "Special",
     engines: [
       {
-          name: "Medium",
-          url: "https://medium.com/search?q={0}",
-          info: "Medium is a blog platform for the modern age.",
+        name: "Medium",
+        url: "https://medium.com/search?q={0}",
+        info: "Medium is a blog platform for the modern age.",
       },
       {
         name: "Google Maps",
@@ -228,6 +267,31 @@ var searchEngines = [
         name: "Youtube",
         url: "https://www.youtube.com/results?search_query={0}",
         info: "Youtube ist eine Video Plattform von Google.",
+      },
+    ],
+  },
+  {
+    name: "Meta Search Engines", 
+    engines: [
+      {
+        name: "MetaGer",
+        url: "https://metager.de/meta/meta.ger3?eingabe={0}&submit-query=&focus=web",
+        info: "MetaGer ist eine Meta-Suche für deutschsprachige Webseiten.",
+      },
+      {
+        name: "etools.ch",
+        url: "https://www.etools.ch/searchSubmit.do?query={0}&country=web&language=all",
+        info: "die Meta-Suchmaschine aus der Schweiz, durchsucht die wichtigsten Schweizer, Deutschen, Österreichischen und internationalen Suchmaschinen.",
+      },
+      {
+        name: "Dogpile.com",
+        url: "https://www.dogpile.com/serp?q={0}",
+        info: "Die Suche von Dogpile.com ist eine Meta-Suchmaschine für Internetseiten.",
+      },
+      {
+        name: "Startpage",
+        url: "https://startpage.com/sp/search?q={0}",
+        info: "\"Meta\"suche, die ausschließlich auf Google zugreift",
       },
     ],
   },
@@ -258,7 +322,7 @@ var searchEngines = [
       {
         name: "Klug Suchen!",
         url: "http://www.klug-suchen.de/cgi-bin/search.cgi?query={0}",
-        info: "Klug Suchen ist eine Metasuchmaschiene.",
+        info: "Allgemeine Suchmaschinen, spezielle Suchdienste, Suchmaschinen für Spezialgebiete",
       },
       {
         name: "Jesus.de",
@@ -285,25 +349,15 @@ var searchEngines = [
         url: "https://www.cinema.de/suche?query={0}",
         info: "Cinema.de ist eine Webseite mit Informationen über Filme.",
       },
-    ],
-  },
-  {
-    name: "Social Media",
-    engines: [
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/search/top/?q={0}",
-        info: "Facebook ist eine Social Media Plattform.",
+        name: "Kino.de",
+        url: "https://www.kino.de/suche.html?q={0}",
+        info: "Kino.de ist eine Webseite mit Informationen über Filme.",
       },
       {
-        name: "Twitter",
-        url: "https://twitter.com/search?q={0}",
-        info: "Twitter ist eine Social Media Plattform.",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/explore/tags/{0}",
-        info: "Instagram ist eine Social Media Plattform.",
+        name: "Mountunity",
+        url: "https://www.mountainwelt.de/search.php?q={0}",
+        info: "Mountunity ist eine Suche für Outdoor-Produkte.",
       },
     ],
   },
