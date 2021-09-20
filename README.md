@@ -2,4 +2,4 @@
 
 A small tool to improve your searches.
 
-Link: https://newspicel.dev/search
+Link: https://search.newspicel.dev/
