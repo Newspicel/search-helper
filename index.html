@@ -7,7 +7,9 @@
   <body>
     <input type="text" id="search" placeholder="Search..." style="width: 100%; text-align: center; height: 50px; font-size: larger" />
     <div id="search-info" style="text-align: center; font-size: medium"></div>
-    <div id="search-results"></div>
+    <div id="search-results">
+      <p>Type for Result</p>
+    </div>
     <script text="text/javascript" src="engines.js"></script>
     <script>
       var search = document.getElementById("search");
@@ -53,5 +55,10 @@
         searchResults.innerHTML = searchResult;
       }
     </script>
+
+    <footer>
+      <p>&copy; 2021 <a href="https://twitter.com/newspicel" target="_blank">Newspicel</a></p>
+      <a href="https://github.com/newspicel/search-helper" target="_blank"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/newspicel/search-helper?style=social"></a>
+    </footer>
   </body>
 </html>
