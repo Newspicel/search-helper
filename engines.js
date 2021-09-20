@@ -278,7 +278,7 @@ var searchEngines = [
     ],
   },
   {
-    name: "Special",
+    name: "Special Searches",
     engines: [
       {
         name: "Medium",
@@ -344,7 +344,7 @@ var searchEngines = [
   },
 
   {
-    name: "Speical Search Engines",
+    name: "Special Search Engines",
     engines: [
       {
         name: "Blinde Kuh",
