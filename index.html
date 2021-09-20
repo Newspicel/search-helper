@@ -3,9 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>Search Helper</title>
+    <style>
+      #search {
+        width: 98%;
+        height: 50px;
+        text-align: center;
+        font-size: x-large;
+
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 1em;
+      }
+    </style>
   </head>
   <body>
-    <input type="text" id="search" placeholder="Search..." style="width: 100%; text-align: center; height: 50px; font-size: larger" />
+    <input type="text" id="search" placeholder="Search..." autocomplete="off" autofocus/>
+    <br>
     <div id="search-info" style="text-align: center; font-size: medium"></div>
     <div id="search-results">
       <p>Type for Result</p>
