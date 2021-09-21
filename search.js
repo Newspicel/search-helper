@@ -28,7 +28,7 @@ function searchEngine(query) {
     searchResults.innerHTML = "";
 
     if (query.length <= 0) {
-        searchInfo.innerHTML = "Type to search."
+        searchInfo.innerHTML = "Type to search"
         return;
     }
 
