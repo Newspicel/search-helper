@@ -18,6 +18,7 @@ function searchEngine(query) {
 
     if (query.startsWith("https://search.newspicel.dev?q=")) {
         query = query.replace("https://search.newspicel.dev?q=", "");
+        search.value = query;
     }
 
     var searchInfo = document.getElementById("search-info");

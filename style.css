@@ -1,13 +1,15 @@
 #search {
-  width: 98%;
+  width: 95%;
   height: 50px;
   text-align: center;
   font-size: x-large;
 
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 1em;
   background-color: #d1d4db;
+
+  padding: 0.5em;
+  margin: 1em;
 }
 
 .light {
