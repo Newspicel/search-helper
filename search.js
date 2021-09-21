@@ -24,7 +24,6 @@ function searchEngine(query) {
     var searchInfo = document.getElementById("search-info");
     var searchResults = document.getElementById("search-results");
 
-    searchInfo.innerHTML = "Searching...";
     searchResults.innerHTML = "";
 
     if (query.length <= 0) {
@@ -32,7 +31,7 @@ function searchEngine(query) {
         return;
     }
 
-    searchInfo.innerText = "Searching for " + query + "...";
+    searchInfo.innerText = "Searching for " + query;
     var queryKey = encodeURIComponent(query);
 
     var searchResult = "";
