@@ -3,76 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <title>Search Helper</title>
-    <style>
-      #search {
-        width: 98%;
-        height: 50px;
-        text-align: center;
-        font-size: x-large;
-
-        background-color: #f5f5f5;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        padding: 1em;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input type="text" id="search" placeholder="Search..." autocomplete="off" autofocus/>
-    <br>
-    <div id="search-info" style="text-align: center; font-size: medium"></div>
-    <div id="search-results">
-      <p>Type for Result</p>
+    <input
+      type="text"
+      id="search"
+      placeholder="Search..."
+      autocomplete="off"
+      autocorrect="off"
+      autofocus
+    />
+    <div id="options">
+      <select id="theme" style="height: 5empx; width: 15em">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+
+      <button id="copy-button" type="button">Copy</button>
     </div>
+    <br />
+    <div id="search-info" style="text-align: center; font-size: medium">Type to search.</div>
+    <div id="search-results">
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2021
+        <a href="https://twitter.com/newspicel" target="_blank">Newspicel</a>
+      </p>
+      <a href="https://github.com/newspicel/search-helper" target="_blank"
+        ><img
+          alt="GitHub Repo stars"
+          src="https://img.shields.io/github/stars/newspicel/search-helper?style=social"
+      /></a>
+    </footer>
+
     <script text="text/javascript" src="engines.js"></script>
-    <script>
-      var search = document.getElementById("search");
+    <script text="text/javascript" src="search.js"></script>
 
-      window.addEventListener("load", () => {
-        const params = new URLSearchParams(window.location.search);
-        const searchParam = params.get("q");
+    <script text="text/javascript">
 
-        if (searchParam) {
-          search.value = searchParam;
-          searchEngine(searchParam);
+      var buttonElement = document.getElementById('copy-button');
+
+      buttonElement.addEventListener('click', function() {
+        var search = document.getElementById('search').value;
+
+        if (search.length > 0) {
+          navigator.clipboard.writeText("https://search.newspicel.dev?q=" + decodeURIComponent(search));
         }
       });
 
-      search.addEventListener("input", () => {
+
+      window.addEventListener("keydown", function(e) {
+        var search = document.getElementById("search");
+        if (e.keyCode === 13 && search.value.length > 0) {
+          search.blur();
+          search.value = "";
+          search.focus();
+          search.select();
+          search.click();
+        }
+        search.focus();
+
         searchEngine(search.value);
+
       });
 
-      function searchEngine(query) {
-        var searchInfo = document.getElementById("search-info");
-        var searchResults = document.getElementById("search-results");
 
-        searchInfo.innerHTML = "Searching...";
-        searchResults.innerHTML = "";
 
-        searchInfo.innerHTML = "Searching for " + query + "...";
-        var queryKey = encodeURIComponent(query);
+      // Themes
+      var themeElement = document.getElementById("theme");
 
-        var searchResult = "";
+      themeElement.addEventListener("input", function () {
+        var theme = document.getElementById("theme").value;
+        console.log(theme);
+        if (theme == "light") {
+          document.body.className = "light";
+          window.localStorage.setItem("theme", "light");
+        } else {
+          document.body.className = "dark";
+          window.localStorage.setItem("theme", "dark");
+        }
+      });
 
-        searchEngines.forEach(function (searchEngine) {
-          var innerSearchResults = "";
-
-          innerSearchResults += "<h3>" + searchEngine.name + "</h3>";
-
-          searchEngine.engines.forEach(function (searchEngineEngine) {
-            innerSearchResults += "<li><a target='_blank' href='" + searchEngineEngine.url.replace("{0}", encodeURIComponent(query)) + "'>" + searchEngineEngine.name + " (" + searchEngineEngine.info + ")" + "</a></li>";
-          });
-
-          searchResult += "<div class='search-category'>" + innerSearchResults + "</div>";
-        });
-
-        searchResults.innerHTML = searchResult;
-      }
+      window.addEventListener("load", function () {
+        // Theme
+        if (window.localStorage.getItem("theme") == "light") {
+          document.body.className = "light";
+          themeElement.value = "light";
+        } else {
+          document.body.className = "dark";
+          themeElement.value = "dark";
+        }
+      });
     </script>
-
-    <footer>
-      <p>&copy; 2021 <a href="https://twitter.com/newspicel" target="_blank">Newspicel</a></p>
-      <a href="https://github.com/newspicel/search-helper" target="_blank"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/newspicel/search-helper?style=social"></a>
-    </footer>
   </body>
 </html>
