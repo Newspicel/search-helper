@@ -3,6 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <title>Search Helper</title>
+    <script type="text/javascript">
+      window.addEventListener("load", function () {
+        // Theme
+        if (window.localStorage.getItem("theme") == "light") {
+          document.body.className = "light";
+          themeElement.value = "light";
+        } else {
+          document.body.className = "dark";
+          themeElement.value = "dark";
+        }
+      });
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -23,9 +35,10 @@
       <button id="copy-button" type="button">Copy</button>
     </div>
     <br />
-    <div id="search-info" style="text-align: center; font-size: medium">Type to search.</div>
-    <div id="search-results">
+    <div id="search-info" style="text-align: center; font-size: medium">
+      Type to search.
     </div>
+    <div id="search-results"></div>
 
     <footer>
       <p>
@@ -43,19 +56,19 @@
     <script text="text/javascript" src="search.js"></script>
 
     <script text="text/javascript">
+      var buttonElement = document.getElementById("copy-button");
 
-      var buttonElement = document.getElementById('copy-button');
-
-      buttonElement.addEventListener('click', function() {
-        var search = document.getElementById('search').value;
+      buttonElement.addEventListener("click", function () {
+        var search = document.getElementById("search").value;
 
         if (search.length > 0) {
-          navigator.clipboard.writeText("https://search.newspicel.dev?q=" + decodeURIComponent(search));
+          navigator.clipboard.writeText(
+            "https://search.newspicel.dev?q=" + decodeURIComponent(search)
+          );
         }
       });
 
-
-      window.addEventListener("keydown", function(e) {
+      window.addEventListener("keydown", function (e) {
         var search = document.getElementById("search");
         if (e.keyCode === 13 && search.value.length > 0) {
           search.blur();
@@ -67,12 +80,8 @@
         search.focus();
 
         searchEngine(search.value);
-
       });
 
-
-
-      // Themes
       var themeElement = document.getElementById("theme");
 
       themeElement.addEventListener("input", function () {
@@ -84,17 +93,6 @@
         } else {
           document.body.className = "dark";
           window.localStorage.setItem("theme", "dark");
-        }
-      });
-
-      window.addEventListener("load", function () {
-        // Theme
-        if (window.localStorage.getItem("theme") == "light") {
-          document.body.className = "light";
-          themeElement.value = "light";
-        } else {
-          document.body.className = "dark";
-          themeElement.value = "dark";
         }
       });
     </script>
