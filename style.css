@@ -16,16 +16,6 @@
   box-sizing: border-box;
 }
 
-.light {
-  background-color: #e9ebf8 !important;
-  color: #b4b8c5;
-}
-
-.dark {
-  background-color: #16262e !important;
-  color: #9094a0;
-}
-
 body {
   text-decoration: none !important;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -51,4 +41,28 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+.option-button {
+  height: 2em; 
+  width: 8em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.option-select {
+  height: 2em; 
+  width: 15em; 
+  padding: 0.1;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#options {
+  
+}
+
+#main {
+  margin-left: 2%;
+  margin-right: 2%;
 }
