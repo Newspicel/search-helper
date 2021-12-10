@@ -196,6 +196,11 @@
           "name":"heute.de",
           "url":"https://www.zdf.de/suche?q={0}",
           "info":"Nachrichten aus Deutschland, Welt und international"
+        },
+        {
+          "name":"rundschau-online.de",
+          "url":"https://www.rundschau-online.de/action/rundschau-online/4484314/search?query={0}",
+          "info":"Die rundschau-online.de ist eine deutsche Zeitung mit einem breiten Spektrum von Themen."
         }
       ]
     },
